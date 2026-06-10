@@ -145,3 +145,9 @@ For details on the architecture, refer to:
 
 1. **Local Kubernetes Deployment**: For cost-efficiency, the AWS EKS module in `main.tf` is commented out. In production environments, this can be uncommented and managed via EKS provider configurations in the pipeline.
 2. **State Storage and Locking**: The Terraform configuration uses a local state file for demonstration. For team collaboration, configure an S3 remote backend with DynamoDB locking.
+
+---
+
+## License
+
+This project is licensed under the GNU General Public License v3.0 - see the [LICENSE](LICENSE) file for details.
