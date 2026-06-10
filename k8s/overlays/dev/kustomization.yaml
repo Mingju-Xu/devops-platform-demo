@@ -1,0 +1,19 @@
+# Copyright (c) 2026 mingju.xu (xumj1125@live.com). All rights reserved.
+# Licensed under the GNU General Public License v3.0.
+
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+namespace: dev
+resources:
+- ../../base
+images:
+- name: ghcr.io/mingju-xu/flask-app
+  newTag: dev-latest
+patches:
+- target:
+    kind: Deployment
+    name: flask-app
+  patch: |
+    - op: replace
+      path: /spec/replicas
+      value: 1

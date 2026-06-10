@@ -1,0 +1,14 @@
+# Copyright (c) 2026 mingju.xu (xumj1125@live.com). All rights reserved.
+# Licensed under the GNU General Public License v3.0.
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: flask-app
+spec:
+  ports:
+  - port: 5000
+    targetPort: 5000
+    protocol: TCP
+  selector:
+    app: flask-app
